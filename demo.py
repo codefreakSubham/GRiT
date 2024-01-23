@@ -104,6 +104,7 @@ if __name__ == "__main__":
     if args.input:
         # for path in tqdm.tqdm(os.listdir(args.input[0]), disable=not args.output):
         count = 0
+        temp = 1
         for item in imglist:
             # captions.append(predict_step([item])[0])
             # img = read_image(os.path.join(args.input[0], path), format="BGR")
@@ -115,17 +116,18 @@ if __name__ == "__main__":
             captions.append(predictions["instances"].pred_object_descriptions.data)
             boxes.append(predictions["instances"].pred_boxes.tensor.tolist())
             scores.append(predictions["instances"].scores.tolist())
-            logger.info(
-                "{}: {} in {:.2f}s".format(
-                    item,
-                    "detected {} instances".format(len(predictions["instances"]))
-                    if "instances" in predictions
-                    else "finished",
-                    time.time() - start_time,
-                )
-            )
-            if(count == 3):
-                break
+            # logger.info(
+            #     "{}: {} in {:.2f}s".format(
+            #         item,
+            #         "detected {} instances".format(len(predictions["instances"]))
+            #         if "instances" in predictions
+            #         else "finished",
+            #         time.time() - start_time,
+            #     )
+            # )
+            if(count%10000 == 0):
+                print(temp)
+                temp++
 
             if args.output:
                 if not os.path.exists(args.output):
