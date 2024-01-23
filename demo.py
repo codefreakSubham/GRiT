@@ -127,7 +127,7 @@ if __name__ == "__main__":
             # )
             if(count%10000 == 0):
                 print(temp)
-                temp++
+                temp+=1
 
             if args.output:
                 if not os.path.exists(args.output):
