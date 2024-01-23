@@ -93,7 +93,7 @@ if __name__ == "__main__":
     cfg = setup_cfg(args)
 
     demo = VisualizationDemo(cfg)
-    img_dir = '/lfs/usrhome/ms/cs21s058/scratch/r2c/data/vcr1images'
+    img_dir = '/kaggle/input/vcr-caption-pkl/vcr1images/vcr1images'
     with open("file.txt", 'r') as f:
         imglist = [line.rstrip('\n') for line in f]
     captions = []
