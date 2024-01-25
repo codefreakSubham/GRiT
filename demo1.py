@@ -94,11 +94,8 @@ if __name__ == "__main__":
 
     demo = VisualizationDemo(cfg)
     img_dir = '/kaggle/input/vcr-caption-pkl/vcr1images/vcr1images'
-<<<<<<< HEAD:demo1.py
+
     with open("file1.txt", 'r') as f:
-=======
-    with open("file.txt", 'r') as f:
->>>>>>> 85e1ddcb07adfd282fef8809deeca439219755e1:demo.py
         imglist = [line.rstrip('\n') for line in f]
     captions = []
     boxes = []
@@ -132,10 +129,6 @@ if __name__ == "__main__":
             if(count%10000 == 0):
                 print(temp)
                 temp+=1
-<<<<<<< HEAD:demo1.py
-
-=======
->>>>>>> 85e1ddcb07adfd282fef8809deeca439219755e1:demo.py
 
             if args.output:
                 if not os.path.exists(args.output):
