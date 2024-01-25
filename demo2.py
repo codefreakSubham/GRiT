@@ -151,5 +151,5 @@ if __name__ == "__main__":
 
         items = [{'img_fn': name, 'objects': obj, 'scores': score, 'caption': cap} for name, obj, score, cap in zip(imglist, boxes, scores, captions)]
 
-        with open("densecap.json", "w") as outfile:
+        with open("densecap2.json", "w") as outfile:
             json.dump(items, outfile)
