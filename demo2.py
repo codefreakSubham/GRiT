@@ -105,7 +105,7 @@ if __name__ == "__main__":
         # for path in tqdm.tqdm(os.listdir(args.input[0]), disable=not args.output):
         count = 0
         temp = 1
-        for item in imglist:
+        for item in tqdm.tqdm(imglist):
             # captions.append(predict_step([item])[0])
             # img = read_image(os.path.join(args.input[0], path), format="BGR")
             count+=1
